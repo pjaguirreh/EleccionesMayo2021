@@ -34,7 +34,7 @@ source("Funciones.R", encoding = "UTF-8")
 # Cargar lista de regiones, comunas, distritos, y circunscripciones
 lista_RegComDisCir <- read_csv("datos/Lista_RegionDistritoComunaCircunscripcion.csv")
 
-circunscripcionesaextraer <- pre_tabla_agregada %>% 
+circunscripcionesaextraer <- lista_RegComDisCir %>% 
   filter(region == "METROPOLITANA DE SANTIAGO") %>% # "SILENCIAR" SI NO SE QUIERE FILTRAR
   distinct(circunscripcion) %>% pull()
 
